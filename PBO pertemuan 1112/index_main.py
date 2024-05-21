@@ -57,27 +57,34 @@ mahasiswa3 = Mahasiswa("Dian", "22150610115", "Teknik Informatika")
 # Membuat objek dari kelas Dosen
 dosen1 = Dosen("Pak Puput", "000112233", "Teknik Informatika")
 dosen2 = Dosen("Bu Yessi", "000445566", "Teknik Informatika")
+dosen3 = Dosen("Pak Mona", "000411565", "Teknik Informatika")
 
 # Menambah mata kuliah yang diajarkan oleh dosen
 dosen1.tambah_matakuliah("Pemrograman Berorientasi Objek")
 dosen2.tambah_matakuliah("Kecerdasan Buatan")
+dosen3.tambah_matakuliah("Embedded System")
 
 # Mahasiswa menambahkan mata kuliah ke dalam KRS mereka
 mahasiswa1.tambah_matakuliah("Pemrograman Berorientasi Objek")
 mahasiswa2.tambah_matakuliah("Kecerdasan Buatan")
+mahasiswa3.tambah_matakuliah("Embedded System")
 
 # Dosen menambahkan nilai untuk mahasiswa
 dosen1.tambah_nilai(mahasiswa1, "Pemrograman Berorientasi Objek", "A")
 dosen2.tambah_nilai(mahasiswa2, "Kecerdasan Buatan", "B")
+dosen3.tambah_nilai(mahasiswa3, "Embedded System", "B+")
 
 # Tampilkan KRS mahasiswa
 mahasiswa1.tampilkan_krs()
 mahasiswa2.tampilkan_krs()
+mahasiswa3.tampilkan_krs()
 
 # Mahasiswa melihat nilai mereka
 mahasiswa1.lihat_nilai()
 mahasiswa2.lihat_nilai()
+mahasiswa3.lihat_nilai()
 
 # Tampilkan mata kuliah yang diajarkan oleh dosen
 dosen1.tampilkan_matakuliah()
 dosen2.tampilkan_matakuliah()
+dosen3.tampilkan_matakuliah()
