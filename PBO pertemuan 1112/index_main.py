@@ -1,7 +1,7 @@
 class Mahasiswa:
-    def __init__(self, nama, nim, jurusan):
+    def __init__(self, nama, npm, jurusan):
         self.nama = nama
-        self.nim = nim
+        self.npm = npm
         self.jurusan = jurusan
         self.krs = {}
         self.nilai = {}
@@ -11,12 +11,12 @@ class Mahasiswa:
         print(f"{self.nama} menambahkan mata kuliah {matakuliah} ke dalam KRS.")
 
     def tampilkan_krs(self):
-        print(f"KRS {self.nama} ({self.nim} - {self.jurusan}):")
+        print(f"KRS {self.nama} ({self.npm} - {self.jurusan}):")
         for matakuliah in self.krs:
             print(f" - {matakuliah} (Nilai: {self.nilai.get(matakuliah, 'Belum Ada Nilai')})")
 
     def lihat_nilai(self):
-        print(f"Nilai {self.nama} ({self.nim} - {self.jurusan}):")
+        print(f"Nilai {self.nama} ({self.npm} - {self.jurusan}):")
         for matakuliah, nilai in self.nilai.items():
             print(f" - {matakuliah}: {nilai}")
 
@@ -28,10 +28,10 @@ class Mahasiswa:
             print(f"{self.nama} tidak mengambil mata kuliah {matakuliah}, nilai tidak dapat ditambahkan.")
 
 class Dosen:
-    def __init__(self, nama, nidn, departemen):
+    def __init__(self, nama, nidn, jurusan):
         self.nama = nama
         self.nidn = nidn
-        self.departemen = departemen
+        self.jurusan = jurusan
         self.mengajar = []
 
     def tambah_matakuliah(self, matakuliah):
@@ -39,7 +39,7 @@ class Dosen:
         print(f"{self.nama} menambahkan mata kuliah {matakuliah} yang diajarkan.")
 
     def tampilkan_matakuliah(self):
-        print(f"Daftar mata kuliah yang diajarkan oleh {self.nama} ({self.nidn} - {self.departemen}):")
+        print(f"Daftar mata kuliah yang diajarkan oleh {self.nama} ({self.nidn} - {self.jurusan}):")
         for matakuliah in self.mengajar:
             print(f" - {matakuliah}")
 
